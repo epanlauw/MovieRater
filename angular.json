@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "movieRate-app"
+    }
+  },
+  "defaultProject": "movieRate-app",
+  "cli": {
+    "analytics": false
+  }
 }

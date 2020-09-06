@@ -1,0 +1,12 @@
+<div *ngIf="movie">
+  <h1>{{ movie.title }}</h1>
+  <p>{{ movie.description }}</p>
+  <fa-icon [icon]="faStar" *ngFor="let item of counter(5); let i = index;" [ngClass]="{'orange': movie.avg_rating > i}"></fa-icon>
+  ({{ movie.no_of_ratings }})
+  <div id="rate-container">
+    <h2>Rate it !!!</h2>
+    <fa-icon [icon]="faStar" *ngFor="let rate of [1,2,3,4,5]" (mouseenter)="rateHover(rate)"
+    (mouseleave)="rateHovered = 0" (click)="rateClicked(rate)"
+    [ngClass]="{'purple': rateHovered >= rate}"></fa-icon>
+  </div>
+</div>
